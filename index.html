@@ -1,36 +1,36 @@
 ---
-layout: page
+layout: index
 ---
 <div class="logo-container">
-	<img src="http://placehold.it/560x460">
+  <img src="http://placehold.it/560x460" alt="Luan Illustrates Logo">
 </div>
 
 <nav>
-	<div class="block-container">
-		{% for item in site.data.settings.index-menu %}
-			{% if item.type == "block" %}
-			<a href="{{ item.url }}">
-				<div class="block">
-					<div class="text-container">
-						<span>{{ item.name }}</span>
-					</div>
-				</div>
-			</a>
-			{% endif %}
+  <div class="block-container">
+    {% for item in site.data.settings.index-menu %}
+      {% if item.type == "block" %}
+      <a href="{{ item.url }}">
+        <div class="block" id="{{ item.name }}">
+          <div class="text-container">
+            <span>{{ item.name }}</span>
+          </div>
+        </div>
+      </a>
+      {% endif %}
     {% endfor %}
-	</div>
+  </div>
 
-	<div class="other-wrapper">
-		<div class="other-container">
-			{% for item in site.data.settings.index-menu %}
-				{% if item.type == "other" %}
-				<div class="other">
-					<a href="{{ item.url }}">
-						{{ item.name }}
-					</a>
-				</div>
-				{% endif %}
-	    {% endfor %}
-		</div>
-	</div>
+  <div class="other-wrapper">
+    <div class="other-container">
+      {% for item in site.data.settings.index-menu %}
+        {% if item.type == "other" %}
+        <div class="other">
+          <a href="{{ item.url }}">
+            {{ item.name }}
+          </a>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </nav>

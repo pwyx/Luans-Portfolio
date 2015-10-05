@@ -1,11 +1,16 @@
-<nav>
-	<div class="logo" id="logo"></div>
-	<ul>
-		<li>Portfolio</li>
-		<li>Illustration</li>
-		<li>Photography</li>
-		<li>L&bullet;Log</li>
-		<li>About</li>
-		<li>Contact</li>
-	</ul>
-</nav>
+<div class="sidebar">
+  <nav class="sidebar-menu">
+    <span class="logo" id="logo"></span>
+    <ul>
+      {% for item in site.data.settings.sidebar-menu %}
+        <li>
+          {% if item.url %}
+            <a href="{{ item.url }}" {% if item.sub %}class="sub-item"{% endif %}>{{ item.name }}</a>
+          {% else %}
+            {{ item.name }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>

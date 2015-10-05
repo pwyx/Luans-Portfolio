@@ -146,7 +146,9 @@ td, th {
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #171717;
-  font-weight: bold; }
+  font-weight: 200;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center; }
 
 .gigantic {
   font-size: 110px;
@@ -196,7 +198,7 @@ a {
   outline: 0; }
 
 a:hover, a:focus {
-  color: #4a4a4a; }
+  color: #979797; }
 
 ::selection {
   background: #bbb; }
@@ -222,8 +224,41 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
+.sidebar-menu .logo {
+  background: url(http://placehold.it/200x200) no-repeat center center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  display: inline-block; }
+.sidebar-menu li {
+  font-size: 24pt;
+  list-style-type: none; }
+  .sidebar-menu li .sub-item {
+    margin: 20px;
+    font-size: 18pt; }
+
+.page-container {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto; }
+  .page-container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.sidebar {
+  width: 220px;
+  height: 100%;
+  position: fixed;
+  float: left; }
+
+.content-container {
+  position: absolute;
+  left: 240 px;
+  right: 0px; }
+
 .logo-container {
-  padding-bottom: 50px; }
+  padding-bottom: 110px; }
   .logo-container img {
     display: block;
     margin: 0 auto; }
@@ -238,7 +273,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  padding-bottom: 50px;
+  padding-bottom: 125px;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -248,6 +283,9 @@ body {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
+  .block-container #Illustration {
+    background: url("/assets/img/cat.jpeg") no-repeat center center;
+    background-size: cover; }
   .block-container .block {
     width: 300px;
     height: 200px;
@@ -284,6 +322,8 @@ body {
       text-transform: uppercase;
       font-size: 24pt;
       font-weight: 300; }
+    .block-container .block:hover, .block-container .block:hover .text-container {
+      border-color: gray; }
 
 .other-wrapper {
   -webkit-box-pack: justify;
@@ -323,3 +363,12 @@ body {
         padding-right: 10px; }
       .other-wrapper .other-container .other:nth-child(even) {
         padding-left: 10px; }
+
+.bio-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px; }
+
+.profile-img img {
+  margin: 0 auto;
+  display: block; }
