@@ -1,0 +1,53 @@
+.logo-container 
+  padding-bottom: 50px
+
+  img
+    display: block
+    margin: 0 auto
+
+.block-container
+  max-width: 960px
+  +display(flex)
+  margin: 0 auto
+  padding-bottom: 50px
+  +justify-content(space-between)
+
+  .block
+    width: 300px
+    height: 200px
+    // padding-top: 16%
+    border: 1px solid black
+    +display(flex)
+    +align-items(center)
+    +justify-content(space-around)
+
+    .text-container
+      width: 75%
+      text-align: center
+      border-bottom: 1px solid black
+      text-transform: uppercase
+      font:
+        size: 24pt
+        weight: 300
+
+.other-wrapper
+  +justify-content(space-between)
+  max-width: 780px
+  margin: 0 auto
+
+  .other-container
+    +display(flex)
+    +justify-content(center)
+    border-top: 1px solid black
+
+    .other
+      text-transform: uppercase
+      font:
+        size: 24pt
+        weight: 300
+
+      &:nth-child(odd)
+        padding-right: 10px
+
+      &:nth-child(even)
+        padding-left: 10px

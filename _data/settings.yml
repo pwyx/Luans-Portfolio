@@ -1,0 +1,23 @@
+#-------------------------------
+# General Site Settings
+
+title: Luan Tran
+description: Photographer // Illustrator
+email: hi@luanillustrates.com
+
+index-menu:
+- {name: Illustration, url: '#illustration', type: block}
+- {name: Photography, url: '#photography', type: block}
+- {name: L&bullet;Log, url: '#about', type: block}
+- {name: About Me, url: '#about', type: other}
+- {name: Contact, url: '#contact', type: other}
+
+side-menu:
+- {name: Portfolio, url: '#portfolio'}
+- {name: Illustration, url: '#illustration', sub: 'Portfolio'}
+- {name: Photography, url: '#photography', sub: 'Portfolio'}
+- {name: L&bullet;Log, url: '#about'}
+- {name: About Me, url: '#about'}
+- {name: Contact, url: '#contact'}
+
+#-------------------------------

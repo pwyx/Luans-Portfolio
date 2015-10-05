@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200,200italic,300italic,400,400italic,600,600italic,700,700italic,900,900italic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -142,14 +143,9 @@ table {
 td, th {
   padding: 0; }
 
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url(//themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format("woff"); }
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
-  color: #BD5248;
+  color: #171717;
   font-weight: bold; }
 
 .gigantic {
@@ -195,18 +191,18 @@ hr {
   height: 0; }
 
 a {
-  color: #BD5248;
+  color: #171717;
   text-decoration: none;
   outline: 0; }
 
 a:hover, a:focus {
-  color: #d89993; }
+  color: #4a4a4a; }
 
 ::selection {
-  background: #FFF498; }
+  background: #bbb; }
 
 ::-moz-selection {
-  background: #FFF498; }
+  background: #bbb; }
 
 img::selection {
   background: transparent; }
@@ -215,13 +211,115 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #FFF498; }
+  -webkit-tap-highlight-color: #bbb; }
 
 body {
   background: #F6F6F8;
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Open Sans" sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+.logo-container {
+  padding-bottom: 50px; }
+  .logo-container img {
+    display: block;
+    margin: 0 auto; }
+
+.block-container {
+  max-width: 960px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify; }
+  .block-container .block {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: center; }
+    .block-container .block .text-container {
+      width: 75%;
+      text-align: center;
+      border-bottom: 1px solid black;
+      text-transform: uppercase;
+      font-size: 24pt;
+      font-weight: 300; }
+
+.other-wrapper {
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  max-width: 780px;
+  margin: 0 auto; }
+  .other-wrapper .other-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    border-top: 1px solid black; }
+    .other-wrapper .other-container .other {
+      text-transform: uppercase;
+      font-size: 24pt;
+      font-weight: 300; }
+      .other-wrapper .other-container .other:nth-child(odd) {
+        padding-right: 10px; }
+      .other-wrapper .other-container .other:nth-child(even) {
+        padding-left: 10px; }
