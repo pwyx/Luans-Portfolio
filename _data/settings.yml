@@ -9,16 +9,16 @@ index-menu:
 - {name: Illustration, url: '#illustration', type: block}
 - {name: Photography, url: '#photography', type: block}
 - {name: L&bullet;Log, url: '#blog', type: block}
-- {name: About Me, url: 'about', type: other}
-- {name: Contact, url: '#contact', type: other}
+- {name: About Me, url: '/about', type: other}
+- {name: Contact, url: '/contact', type: other}
 
 sidebar-menu:
 - {name: Home, url: '/'}
 - {name: Portfolio}
-- {name: Illustration, url: '#illustration', sub: 'Portfolio'}
+- {name: Illustration, url: '#illustration', susb: 'Portfolio'}
 - {name: Photography, url: '#photography', sub: 'Portfolio'}
 - {name: L&bullet;Log, url: '#blog'}
-- {name: About Me, url: 'about'}
-- {name: Contact, url: '#contact'}
+- {name: About Me, url: '/about'}
+- {name: Contact, url: '/contact'}
 
 #-------------------------------

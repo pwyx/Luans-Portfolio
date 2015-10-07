@@ -4,6 +4,7 @@
   img
     display: block
     margin: 0 auto
+    height: 500px
 
 
 .block-container
@@ -20,7 +21,7 @@
   .block
     width: 300px
     height: 200px
-    border: 1px solid black
+    border: 1px solid $link-color
     +display(flex)
     +align-items(center)
     +justify-content(space-around)
@@ -28,14 +29,14 @@
     .text-container
       width: 75%
       text-align: center
-      border-bottom: 1px solid black
+      border-bottom: 1px solid $link-color
       text-transform: uppercase
       font:
         size: 24pt
         weight: 300
 
-    &:hover, &:hover .text-container
-      border-color: lighten(black, 50%)
+    &:hover, &:hover .text-container, &:active, &:active .text-container
+      border-color: $hover-color
 
 .other-wrapper
   +justify-content(space-between)
@@ -45,7 +46,7 @@
   .other-container
     +display(flex)
     +justify-content(center)
-    border-top: 1px solid black
+    border-top: 1px solid $link-color
 
     .other
       text-transform: uppercase
@@ -54,7 +55,7 @@
         weight: 300
 
       &:nth-child(odd)
-        padding-right: 10px
+        padding-right: 25px
 
       &:nth-child(even)
-        padding-left: 10px
+        padding-left: 25px
