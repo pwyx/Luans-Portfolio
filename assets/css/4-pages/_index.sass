@@ -6,17 +6,16 @@
     margin: 0 auto
     height: 500px
 
-
 .block-container
   max-width: 960px
   +display(flex)
   margin: 0 auto
-  padding-bottom: 125px
+  padding-bottom: 90px
   +justify-content(space-between)
 
-  #Illustration
-    background: url("/assets/img/cat.jpeg") no-repeat center center
-    background-size: cover
+  // #illustration
+  //   background: url("/assets/img/cat.jpeg") no-repeat center center
+  //   background-size: cover
 
   .block
     width: 300px
@@ -29,14 +28,43 @@
     .text-container
       width: 75%
       text-align: center
-      border-bottom: 1px solid $link-color
+      // border-bottom: 1px solid $link-color
       text-transform: uppercase
       font:
         size: 24pt
         weight: 300
 
+      hr
+        margin-top: -5px
+        height: 1px
+        background-color: $link-color
+
+        &:after
+          $hr-img-height: 15px
+          background: url('http://placehold.it/100x15/fff/fff.png?text=.') no-repeat top center
+          content: ""
+          font-size: 8pt
+          color: red
+          display: block
+          height: $hr-img-height
+          position: relative
+          // padding: 0 2px
+          // background-color #fff
+          top: -($hr-img-height/2)
+
+
     &:hover, &:hover .text-container, &:active, &:active .text-container
       border-color: $hover-color
+
+  #illustration .text-container hr:after
+    content: "Illustration"
+
+  #photography .text-container hr:after
+    content: "Photography"
+
+  #blog .text-container hr:after
+    content: "L\2022Log"
+
 
 .other-wrapper
   +justify-content(space-between)

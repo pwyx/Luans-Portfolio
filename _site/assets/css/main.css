@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,200,200italic,300italic,400,400italic,600,600italic,700,700italic,900,900italic);
 html {
   font-family: sans-serif;
@@ -176,6 +177,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 10px;
   line-height: 1.2; }
 
+* {
+  box-sizing: border-box; }
+
 p {
   margin: 0 0 20px 0; }
 
@@ -216,7 +220,7 @@ body {
   -webkit-tap-highlight-color: #bbb; }
 
 body {
-  background: #F6F6F8;
+  background: #FFF;
   font-size: 14px;
   line-height: 1.6;
   font-family: "Source Sans Pro", sans-serif;
@@ -224,18 +228,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
 
-.sidebar-menu .logo {
-  background: url(/assets/img/logo.svg) no-repeat center center;
-  background-size: cover;
-  width: 200px;
-  height: 200px;
-  display: inline-block; }
-.sidebar-menu li {
-  font-size: 24pt;
-  list-style-type: none; }
-  .sidebar-menu li .sub-item {
-    margin: 20px;
-    font-size: 18pt; }
+.sidebar-menu {
+  background: pink; }
+  .sidebar-menu .logo {
+    background: url(/assets/img/logo.svg) no-repeat center center lightblue;
+    background-size: cover;
+    display: inline-block;
+    height: 220px;
+    width: 220px; }
+  .sidebar-menu ul {
+    padding-left: 20px; }
+    .sidebar-menu ul li {
+      font-size: 24pt;
+      list-style-type: none; }
+      .sidebar-menu ul li .sub-item {
+        margin: 20px;
+        font-size: 18pt; }
 
 .page-container {
   position: relative;
@@ -274,7 +282,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  padding-bottom: 125px;
+  padding-bottom: 90px;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   box-pack: justify;
@@ -284,9 +292,6 @@ body {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify; }
-  .block-container #Illustration {
-    background: url("/assets/img/cat.jpeg") no-repeat center center;
-    background-size: cover; }
   .block-container .block {
     width: 300px;
     height: 200px;
@@ -319,12 +324,30 @@ body {
     .block-container .block .text-container {
       width: 75%;
       text-align: center;
-      border-bottom: 1px solid #171717;
       text-transform: uppercase;
       font-size: 24pt;
       font-weight: 300; }
+      .block-container .block .text-container hr {
+        margin-top: -5px;
+        height: 1px;
+        background-color: #171717; }
+        .block-container .block .text-container hr:after {
+          background: url("http://placehold.it/100x15/fff/fff.png?text=.") no-repeat top center;
+          content: "";
+          font-size: 8pt;
+          color: red;
+          display: block;
+          height: 15px;
+          position: relative;
+          top: -7.5px; }
     .block-container .block:hover, .block-container .block:hover .text-container, .block-container .block:active, .block-container .block:active .text-container {
       border-color: #979797; }
+  .block-container #illustration .text-container hr:after {
+    content: "Illustration"; }
+  .block-container #photography .text-container hr:after {
+    content: "Photography"; }
+  .block-container #blog .text-container hr:after {
+    content: "L•Log"; }
 
 .other-wrapper {
   -webkit-box-pack: justify;
@@ -373,3 +396,38 @@ body {
 .profile-img img {
   margin: 0 auto;
   display: block; }
+
+form {
+  margin: 0 auto 50px auto;
+  font-size: 1.5em; }
+  form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #171717; }
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #979797; }
+  form .input-focus {
+    color: #979797; }
+  form [type='submit'] {
+    background: #171717;
+    color: white;
+    text-transform: uppercase;
+    width: 33%; }
+  form .submit-container {
+    text-align: right; }
+  form label {
+    display: block;
+    margin-bottom: 20px; }
+    form label span {
+      display: block; }
+    form label textarea {
+      resize: vertical;
+      height: 10em; }
+  form .contact-form-group label {
+    width: 50%;
+    float: left; }
+    form .contact-form-group label:nth-child(odd) {
+      padding-right: 5px; }
+    form .contact-form-group label:nth-child(even) {
+      padding-left: 5px; }

@@ -1,16 +1,20 @@
 .sidebar-menu
+  background: pink
+
   .logo
     // background: url(http://placehold.it/200x200) no-repeat center center
-    background: url(/assets/img/logo.svg) no-repeat center center
+    background: url(/assets/img/logo.svg) no-repeat center center lightblue
     background-size: cover
-    width: 200px
-    height: 200px
     display: inline-block
+    +size(220px)
 
-  li
-    font-size: 24pt
-    list-style-type: none
+  ul
+    padding-left: 20px
 
-    .sub-item
-      margin: 20px
-      font-size: 18pt
+    li
+      font-size: 24pt
+      list-style-type: none
+
+      .sub-item
+        margin: 20px
+        font-size: 18pt
