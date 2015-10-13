@@ -245,6 +245,10 @@ body {
         margin: 20px;
         font-size: 18pt; }
 
+.sidebarfixed {
+  position: fixed;
+  top: 0; }
+
 .page-container {
   position: relative;
   max-width: 960px;
