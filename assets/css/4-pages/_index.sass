@@ -1,10 +1,8 @@
 .logo-container 
-  padding-bottom: 110px
-
   img
     display: block
     margin: 0 auto
-    height: 500px
+    height: 750px
 
 .block-container
   max-width: 960px
@@ -37,7 +35,7 @@
       hr
         margin-top: -5px
         height: 1px
-        background-color: $link-color
+        border-color: $link-color
 
         &:after
           $hr-img-height: 15px
@@ -53,7 +51,7 @@
           top: -($hr-img-height/2)
 
 
-    &:hover, &:hover .text-container, &:active, &:active .text-container
+    &:hover, &:hover .text-container, &:hover .text-container hr, &:active, &:active .text-container, &:active .text-container hr
       border-color: $hover-color
 
   #illustration .text-container hr:after

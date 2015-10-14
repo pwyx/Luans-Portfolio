@@ -269,12 +269,10 @@ body {
   left: 240 px;
   right: 0px; }
 
-.logo-container {
-  padding-bottom: 110px; }
-  .logo-container img {
-    display: block;
-    margin: 0 auto;
-    height: 500px; }
+.logo-container img {
+  display: block;
+  margin: 0 auto;
+  height: 750px; }
 
 .block-container {
   max-width: 960px;
@@ -334,7 +332,7 @@ body {
       .block-container .block .text-container hr {
         margin-top: -5px;
         height: 1px;
-        background-color: #171717; }
+        border-color: #171717; }
         .block-container .block .text-container hr:after {
           background: url("http://placehold.it/100x15/fff/fff.png?text=.") no-repeat top center;
           content: "";
@@ -344,7 +342,7 @@ body {
           height: 15px;
           position: relative;
           top: -7.5px; }
-    .block-container .block:hover, .block-container .block:hover .text-container, .block-container .block:active, .block-container .block:active .text-container {
+    .block-container .block:hover, .block-container .block:hover .text-container, .block-container .block:hover .text-container hr, .block-container .block:active, .block-container .block:active .text-container, .block-container .block:active .text-container hr {
       border-color: #979797; }
   .block-container #illustration .text-container hr:after {
     content: "Illustration"; }
@@ -399,7 +397,8 @@ body {
 
 .profile-img img {
   margin: 0 auto;
-  display: block; }
+  display: block;
+  border-radius: 50%; }
 
 form {
   margin: 0 auto 50px auto;
