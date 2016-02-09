@@ -1,0 +1,17 @@
+---
+layout: page
+title: Luantics
+---
+
+<ul>
+  {% for post in site.posts %}
+    <a href="{{ post.url }}">
+      <li class="blog-item" style="background-image: {{ post.header-img }}">
+        <div class="overlay"></div>
+        <div class="post-title">
+          {{ post.title }}
+        </div>
+      </li>
+    </a>
+  {% endfor %}
+</ul>
