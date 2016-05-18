@@ -21,6 +21,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+#jekyll site
+_site
 
 ### Sass ###
 .sass-cache

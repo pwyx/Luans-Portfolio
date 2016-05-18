@@ -7,8 +7,26 @@ $(document).ready(function() {
     $('span').removeClass('input-focus');
   });
 
+  // about page
+  var dynamic = $('.bio-img');
+  var static = $('.bio-text');
+  static.height(dynamic.height());
+
+  $(window).resize(function resize() {
+      static.height(dynamic.height());
+  }).trigger('resize');
+
 });
 
+// post header
+$(window).scroll(function() {
+  if ($(this).width() > 768) {
+    var scrolledY = $(window).scrollTop();
+    $('.header-img').css('background-position', 'center ' + ((scrolledY)) + 'px');
+  }
+});
+
+/*
 $(window).load(function($){
   header_scroll();
 });
@@ -34,3 +52,4 @@ function header_scroll(){
 
   }
 }
+*/

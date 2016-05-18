@@ -1,10 +1,75 @@
 .bio-container
-	max-width: 700px
-	margin: 0 auto
-	padding: 20px
+  // max-width: 700px
+  margin: 0 auto
+  padding: 20px
+  +clearfix
 
+  .bio-img
+    margin-top: 20px
+    position: relative
+    z-index: 1
+    float: left
+    max-width: 45%
 
-.profile-img img
-	margin: 0 auto
-	display: block
-	border-radius: 50%
+    &:before
+      content: " "
+      position: absolute
+      z-index: 2
+      border:
+        width: 0 0 75px 100px
+        style: solid
+        color: #fff transparent transparent #fff
+
+    img
+      width: 100%
+
+  .bio-text
+    background: $accent-color
+    max-width: 55%
+    position: relative
+    z-index: 1
+    float: right
+
+    .text-container
+      display: flex
+      align-items: center
+      height: 92.5%
+
+      p
+        padding: 1em
+
+      a
+        color: $accent-light
+        &:hover
+          color: #fff
+
+    &:before
+      display: block
+      content: "ME, ME, ME"
+      position: relative
+      text-align: right
+      background: $bg-color
+      display: block
+      line-height: 0.7
+      margin-right: -2px
+      color: $accent-color
+      font:
+        family: 'Roboto', sans-serif
+        weight: 700
+        size: 3rem
+
+    &:after
+      content: " "
+      position: absolute
+      bottom: 0
+      right: 0
+      border:
+        width: 0 0 75px 100px
+        style: solid
+        color: transparent #fff #fff transparent
+
+/*.profile-img
+  img
+    max-width: 700px
+    margin: 0 auto
+    display: block*/

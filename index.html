@@ -3,7 +3,6 @@ layout: index
 ---
 <div class="logo-container">
   <img src="/assets/img/logo.svg" alt="Luan Illustrates Logo">
-  <!-- <img src="http://placehold.it/500x500" alt="Luan Illustrates Logo"> -->
 </div>
 
 <nav>
@@ -11,10 +10,10 @@ layout: index
     {% for item in site.data.settings.index-menu %}
       {% if item.type == "block" %}
       <a href="{{ item.url }}">
-        <div class="block" id="{{ item.name | downcase | replace: 'l&bullet;log', 'blog'}}">
+        <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
           <div class="text-container">
-            <span>{{ item.name }}</span>
-          	<hr/>
+            {{ item.name }}
+            <!-- <hr/> -->
           </div>
         </div>
       </a>

@@ -1,8 +1,9 @@
-.logo-container 
+.logo-container
+  margin: 50px 0
   img
     display: block
     margin: 0 auto
-    height: 750px
+    max-width: 1000px
 
 .block-container
   max-width: 960px
@@ -11,14 +12,10 @@
   padding-bottom: 90px
   +justify-content(space-between)
 
-  // #illustration
-  //   background: url("/assets/img/cat.jpeg") no-repeat center center
-  //   background-size: cover
-
   .block
     width: 300px
     height: 200px
-    border: 1px solid $link-color
+    border: 3px solid $link-color
     +display(flex)
     +align-items(center)
     +justify-content(space-around)
@@ -27,22 +24,22 @@
       width: 75%
       text-align: center
       // border-bottom: 1px solid $link-color
-      text-transform: uppercase
       font:
         size: 24pt
         weight: 300
 
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 1)
+
       hr
-        margin-top: -5px
+        margin-top: 5px
         height: 1px
         border-color: $link-color
 
         &:after
-          $hr-img-height: 15px
-          background: url('http://placehold.it/100x15/fff/fff.png?text=.') no-repeat top center
+          $hr-img-height: 30px
+          background: url('/assets/img/icon-bg.png') no-repeat top center
           content: ""
           font-size: 8pt
-          color: red
           display: block
           height: $hr-img-height
           position: relative
@@ -52,21 +49,110 @@
 
 
     &:hover, &:hover .text-container, &:hover .text-container hr, &:active, &:active .text-container, &:active .text-container hr
-      border-color: $hover-color
+      color: $accent-color
+      border-color: $accent-color
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 1)
 
-  #illustration .text-container hr:after
-    content: "Illustration"
+  #illustration
+    position: relative
+    overflow: hidden
 
-  #photography .text-container hr:after
-    content: "Photography"
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: url("/assets/img/thumb/illustration.jpg") no-repeat center center
+      background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
 
-  #blog .text-container hr:after
-    content: "L\2022Log"
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
 
+    .text-container hr:after
+      content: "\f040"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
+
+  #photography
+    position: relative
+    overflow: hidden
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: url("/assets/img/thumb/photography.jpg") no-repeat center center
+      background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-filter: blur(0.2)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    .text-container hr:after
+      content: "\f083"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
+
+  #blog
+    position: relative
+    overflow: hidden
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: url("/assets/img/thumb/blog.jpg") no-repeat center center
+      background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    .text-container hr:after
+      content: "\f0f6"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
 
 .other-wrapper
   +justify-content(space-between)
-  max-width: 780px
+  max-width: 1000px
   margin: 0 auto
 
   .other-container

@@ -4,7 +4,10 @@ title: Luan Tran
 # Build settings
 markdown: kramdown
 permalink: pretty
+host: 0.0.0.0
 port: 3000
 sass:
   sass_dir: assets/css
   style: :nested
+gems: ["jemoji"]
+emoji_dir: assets/img/emoji
