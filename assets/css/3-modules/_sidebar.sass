@@ -3,8 +3,10 @@
   z-index: 2
   width: 220px
   position: fixed
-  top: 20px
-  bottom: 20px
+  top: 0px
+  bottom: 0px
+  // top: 20px
+  // bottom: 20px
 
   .sidebar-button
     background: $accent-color
@@ -54,34 +56,34 @@
     // background: lavender
     height: 100%
     position: relative
-    z-index: 3
+    padding-top: 20px
 
-    &:before
-      content: " "
-      display: block
-      position: relative
-      top: -20px
-      width: 220px
-      height: 20px
-      background: $bg-color
+    // &:before
+    //   content: " "
+    //   display: block
+    //   position: relative
+    //   top: -20px
+    //   width: 220px
+    //   height: 20px
+    //   background: $bg-color
 
-    &:after
-      content: " "
-      display: block
-      position: absolute
-      left: 0
-      right: 0
-      bottom: -20px
-      height: 20px
-      background: $bg-color
+    // &:after
+    //   content: " "
+    //   display: block
+    //   position: absolute
+    //   left: 0
+    //   right: 0
+    //   bottom: -20px
+    //   height: 20px
+    //   background: $bg-color
 
     .logo
-      background: url(/assets/img/logo.svg) no-repeat center center
+      background: url(/assets/img/logo_square.svg) no-repeat center center
       background-size: contain
       display: inline-block
-      width: 220px
-      padding: 40px
-      // +size(220px)
+      // width: 220px
+      // padding: 40px
+      +size(220px)
 
 
     ul

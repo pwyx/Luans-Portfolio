@@ -2,14 +2,14 @@
 layout: index
 ---
 <div class="logo-container">
-  <img src="/assets/img/logo.svg" alt="Luan Illustrates Logo">
+  <img src="{{ site.baseurl }}/assets/img/logo.svg" alt="Luan Illustrates Logo">
 </div>
 
 <nav>
   <div class="block-container">
     {% for item in site.data.settings.index-menu %}
       {% if item.type == "block" %}
-      <a href="{{ item.url }}">
+      <a href="{{ site.baseurl }}{{ item.url }}">
         <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
           <div class="text-container">
             {{ item.name }}
@@ -26,7 +26,7 @@ layout: index
       {% for item in site.data.settings.index-menu %}
         {% if item.type == "other" %}
         <div class="other">
-          <a href="{{ item.url }}">
+          <a href="{{ site.baseurl }}{{ item.url }}">
             {{ item.name }}
           </a>
         </div>

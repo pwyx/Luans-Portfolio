@@ -1,11 +1,11 @@
 <div class="sidebar">
   <nav class="sidebar-menu">
-    <a href="/" class="logo" id="logo"></a>
+    <a href="{{ site.baseurl }}/" class="logo" id="logo"></a>
     <ul>
       {% for item in site.data.settings.sidebar-menu %}
         <li>
           {% if item.url %}
-            <a href="{{ item.url }}" {% if item.sub %}class="sub-item"{% endif %}>{{ item.name }}</a>
+            <a href="{{ site.baseurl }}{{ item.url }}" {% if item.sub %}class="sub-item"{% endif %}>{{ item.name }}</a>
           {% else %}
             <span>{{ item.name }}</span>
           {% endif %}
