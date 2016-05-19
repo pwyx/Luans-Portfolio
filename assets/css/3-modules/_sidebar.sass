@@ -1,3 +1,6 @@
+---
+---
+
 .sidebar
   left: -220px
   z-index: 2
@@ -78,12 +81,12 @@
     //   background: $bg-color
 
     .logo
-      background: url(/assets/img/logo_square.svg) no-repeat center center
+      background: url("{{ site.baseurl }}/assets/img/logo.svg") no-repeat center center
       background-size: contain
       display: inline-block
-      // width: 220px
-      // padding: 40px
-      +size(220px)
+      width: 220px
+      padding: 40px
+      // +size(220px)
 
 
     ul
