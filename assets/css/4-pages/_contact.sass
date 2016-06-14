@@ -5,8 +5,10 @@ form
   input, textarea
     width: 100%
     padding: 10px
-    border: 3px solid lighten($accent-color, 5%)
-    background-color: lighten($accent-color, 5%)
+    border: 2px solid #fff
+    border-bottom: 2px solid #000
+    // background-color: lighten($accent-color, 5%)
+    background-color: #fff
     border-radius: 3px
 
     &[type="submit"]
@@ -17,13 +19,13 @@ form
     &:focus
       outline: none
       background-color: $accent-light
-      border: 3px solid $accent-light
-      border-bottom: 3px solid $accent-color
+      border: 2px solid $accent-light
+      border-bottom: 2px solid $accent-color
       border-radius: 3px
 
   .input-focus
     color: $accent-color
-    font-weight: 400
+    font-weight: 300
 
   [type='submit']
     background: $accent-color
@@ -37,10 +39,11 @@ form
   label
     display: block
     margin-bottom: 20px
-    font-weight: 200
 
     span
       display: block
+      font-weight: 300
+      margin-bottom: 6px
 
     textarea
       resize: vertical

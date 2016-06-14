@@ -46,11 +46,11 @@ $(document).ready(function($) {
       }
     }
 
-    if ($(window).width() <= 1440) {
+    // if ($(window).width() <= 1440) {
       $(document).click(function() {
         sideMenu.close();
       });
-    }
+    // }
 
     // $('.sidebar a').on('click',function() {
     //   sideMenu.close();

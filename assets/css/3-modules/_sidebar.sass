@@ -11,6 +11,7 @@
   .sidebar-button
     background: $accent-color
     position: fixed
+    z-index: -1
     left: 0
     top: 0
     bottom: 0
@@ -87,7 +88,7 @@
 
 
     ul
-      padding-left: 10px
+      padding-left: 20px
       color: $bg-color
 
       li
@@ -122,3 +123,8 @@
   -webkit-transition: all 0.3s ease-in-out
   -moz-transition: all 0.3s ease-in-out
   transition: all 0.3s ease-in-out
+
+.sidebar-button
+  -webkit-transition: all 1.25s ease-in-out
+  -moz-transition: all 1.25s ease-in-out
+  transition: all 1.25s ease-in-out

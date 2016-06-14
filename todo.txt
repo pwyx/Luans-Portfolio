@@ -1,0 +1,17 @@
+To Do
+
+Blog:
+	Blog post header image center
+
+Sidebar:
+	Page Name
+	Hover state timing
+
+About:
+	Mobile Page
+
+Page Title Headings: Font Tweaks
+
+Contact Page:
+	Mobile Screen
+		Cascading Input Fields
