@@ -10,7 +10,10 @@ $(document).ready(function() {
   // about page
   var dynamic = $('.bio-img');
   var static = $('.bio-text');
-  static.height(dynamic.height());
+
+  $(window).load(function() {
+    static.height(dynamic.height());
+  })
 
   $(window).resize(function resize() {
       static.height(dynamic.height());

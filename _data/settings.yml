@@ -13,7 +13,7 @@ index-menu:
 - {name: Let's Talk, url: '/contact', type: other}
 
 sidebar-menu:
-- {name: Home, url: '/'}
+# - {name: Home, url: '/'}
 - {name: Portfolio}
 - {name: Illustration, url: '/illustration', sub: 'Portfolio'}
 - {name: Photography, url: '/photography', sub: 'Portfolio'}
