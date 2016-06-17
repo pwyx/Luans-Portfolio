@@ -15,6 +15,6 @@
   </nav>
 
   <div class="sidebar-button">
-    <div class="text-container">Menu</div>
+    <div class="text-container">{{ page.url | remove_first: '/' | split: '/' | first | capitalize | replace: 'Blog', 'LUANtics' }}</div>
   </div>
 </div>

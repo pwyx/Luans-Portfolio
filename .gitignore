@@ -23,6 +23,8 @@ Temporary Items
 
 #jekyll site
 _site/
+assets/img/001
+assets/img/emoji
 
 ### Sass ###
 .sass-cache
