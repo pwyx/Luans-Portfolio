@@ -1,0 +1,82 @@
+#-------------------------------
+# Photography Portfolio Gallery
+- id: photography
+  description: This is my photography portfolio blah blah something something photos are cool
+  imagefolder: assets/img/photography
+  images:
+  - file: 001.jpg
+    thumb: 001.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 002.jpg
+    thumb: 002.jpg
+    title: Photo Title Blah
+  - file: 003.jpg
+    thumb: 003.jpg
+  - file: 011.jpg
+    thumb: 011.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 012.jpg
+    thumb: 012.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 013.jpg
+    thumb: 013.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 021.jpg
+    thumb: 021.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 022.jpg
+    thumb: 022.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 023.jpg
+    thumb: 023.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 014.jpg
+    thumb: 014.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 024.jpg
+    thumb: 024.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: 034.jpg
+    thumb: 034.jpg
+    title: Photo Title Blah
+    text: Photo description blah blah photo description blah blah photo description blah blah.
+
+#-------------------------------
+# Ilustration Portfolio Gallery
+- id: illustration
+  description: This is my illustration portfolio blah blah something something drawings are cool
+  imagefolder: assets/img/illustration
+  images:
+  - file: 040.jpg
+    thumb: 040.jpg
+    title: illustration title blah
+    text: illustration description blah blah
+  - file: 050.jpg
+    thumb: 050.jpg
+    title: illustration title blah
+    text: illustration description blah blah
+  - file: 060.jpg
+    thumb: 060.jpg
+    title: illustration title blah
+    text: illustration description blah blah
+  - file: 044.jpg
+    thumb: 044.jpg
+    title: illustration title blah
+    text: illustration description blah blah
+  - file: 055.jpg
+    thumb: 055.jpg
+    title: illustration title blah
+    text: illustration description blah blah
+  - file: 066.jpg
+    thumb: 066.jpg
+    title: illustration title blah
+    text: illustration description blah blah

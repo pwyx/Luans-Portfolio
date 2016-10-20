@@ -1,0 +1,69 @@
+---
+layout: page
+---
+
+{% for gallery in site.data.galleries %}
+  {% if gallery.id == page.galleryid %}
+    <h2 class="gallery-description">{{ gallery.description }}</h2>
+    <div class="gallery-container">
+      <ul class="gridder">
+        {% for image in gallery.images %}
+          <li class="gridder-list" data-griddercontent="#{{ gallery.id }}-{{ forloop.index }}">
+            <div class="thumb" style="background-image: url({{ site.baseurl }}/{{ gallery.imagefolder }}/{{ image.thumb }})">
+              {% if image.title %}
+                <div class="description">
+                  {% if image.title %}
+                    <h2>{{ image.title }}</h2>
+                  {% endif %}
+                  {% if image.text %}
+                    <h3>{{ image.text }}</h3>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+      {% for image in gallery.images %}
+        <div id="{{ gallery.id }}-{{ forloop.index }}" class="gridder-content">
+          <img class="image" src="{{ site.page.baseurl }}/{{ gallery.imagefolder }}/{{ image.file }}">
+          <!-- <a href="{{ site.baseurl }}/{{ gallery.imagefolder }}/{{ image.file }}" title="{{ image.text }}">
+            <img class="image" src="{{ site.baseurl }}/{{ gallery.imagefolder }}/{{ image.file }}">
+          </a> -->
+          <!-- {% if image.title %}
+            <div class="description">
+              <h2>{{ image.title }}</h2>
+              <br>
+              <h3>{{ image.text }}</h3>
+            </div>
+          {% endif %} -->
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endfor %}
+<script type="text/javascript" data-no-emoji>
+  $(document).ready(function ($) {
+    $(".gridder").gridderExpander({
+      scroll: true,
+      scrollOffset: 60,
+      scrollTo: "panel",
+      animationSpeed: 400,
+      animationEasing: "easeInOutExpo",
+      showNav: true,
+      nextText: "<i class=\"fa fa-arrow-right\"></i>",
+      prevText: "<i class=\"fa fa-arrow-left\"></i>",
+      closeText: "<i class=\"fa fa-times\"></i>",
+      onStart: function () {
+        console.log("Gridder Inititialised");
+      },
+      onContent: function () {
+        console.log("Gridder Content Loaded");
+        // $(".carousel").carousel();
+      },
+      onClosed: function () {
+        console.log("Gridder Closed");
+      }
+    });
+  });
+</script>

@@ -1,37 +1,26 @@
 ---
 layout: index
 ---
-<div class="logo-container">
-  <img src="{{ site.baseurl }}/assets/img/logo.svg" alt="Luan Illustrates Logo">
-</div>
+<div class="splash">
 
-<nav>
-  <div class="block-container">
-    {% for item in site.data.settings.index-menu %}
-      {% if item.type == "block" %}
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
-          <div class="text-container">
-            {{ item.name }}
-            <!-- <hr/> -->
-          </div>
-        </div>
-      </a>
-      {% endif %}
-    {% endfor %}
+  <div class="logo-container">
+    <img src="{{ site.baseurl }}/assets/img/logo_white.svg" alt="Luan Illustrates Logo">
   </div>
 
-  <div class="other-wrapper">
-    <div class="other-container">
+  <nav>
+    <div class="index-container">
       {% for item in site.data.settings.index-menu %}
-        {% if item.type == "other" %}
-        <div class="other">
-          <a href="{{ site.baseurl }}{{ item.url }}">
-            {{ item.name }}
-          </a>
-        </div>
+        {% if item.type == "block" %}
+        <a href="{{ site.baseurl }}{{ item.url }}">
+          <div class="nav-link" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
+            <div class="text-container">
+              {{ item.name }}
+            </div>
+          </div>
+        </a>
         {% endif %}
       {% endfor %}
     </div>
-  </div>
-</nav>
+  </nav>
+
+</div>

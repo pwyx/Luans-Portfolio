@@ -1,0 +1,177 @@
+.logo-container
+  margin: 50px 0
+  img
+    display: block
+    margin: 0 auto
+    max-width: 1000px
+
+.block-container
+  max-width: 960px
+  +display(flex)
+  margin: 0 auto
+  padding-bottom: 90px
+  +justify-content(space-between)
+
+  .block
+    width: 300px
+    height: 200px
+    // border: 3px solid $link-color
+    +display(flex)
+    +align-items(center)
+    +justify-content(space-around)
+
+    .text-container
+      width: 75%
+      text-align: center
+      // border-bottom: 1px solid $link-color
+      font:
+        size: 24pt
+        weight: 300
+
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 1)
+
+      hr
+        margin-top: 5px
+        height: 1px
+        border-color: $link-color
+
+        &:after
+          $hr-img-height: 30px
+          // moved to style tag inside <head></head>
+          // background: url("{{ site.baseurl }}/assets/img/icon-bg.png") no-repeat top center
+          content: ""
+          font-size: 8pt
+          display: block
+          height: $hr-img-height
+          position: relative
+          // padding: 0 2px
+          // background-color #fff
+          top: -($hr-img-height/2)
+
+
+    &:hover, &:hover .text-container, &:hover .text-container hr, &:active, &:active .text-container, &:active .text-container hr
+      color: $accent-color
+      border-color: $accent-color
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 1)
+
+  #illustration
+    position: relative
+    overflow: hidden
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      // moved to style tag inside <head></head>
+      // background: url("{{ site.baseurl }}/assets/img/thumb/illustration.jpg") no-repeat center center
+      // background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    .text-container hr:after
+      content: "\f040"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
+
+  #photography
+    position: relative
+    overflow: hidden
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      // moved to style tag inside <head></head>
+      // background: url("{{ site.baseurl }}/assets/img/thumb/photography.jpg") no-repeat center center
+      // background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-filter: blur(0.2)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    .text-container hr:after
+      content: "\f083"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
+
+  #blog
+    position: relative
+    overflow: hidden
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      // moved to style tag inside <head></head>
+      // background: url("{{ site.baseurl }}/assets/img/thumb/blog.jpg") no-repeat center center
+      // background-size: cover
+      -webkit-filter: saturate(0%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    &:hover:after
+      -webkit-filter: saturate(100%)
+      -webkit-transition: 0.5s all ease-in-out
+      transition: 0.5s all ease-in-out
+
+    .text-container hr:after
+      content: "\f0f6"
+      font-family: FontAwesome
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      text-decoration: inherit
+
+.other-wrapper
+  +justify-content(space-between)
+  max-width: 1000px
+  margin: 0 auto
+
+  .other-container
+    +display(flex)
+    +justify-content(center)
+    border-top: 1px solid $link-color
+
+    .other
+      text-transform: uppercase
+      font:
+        size: 24pt
+        weight: 300
+
+      &:nth-child(odd)
+        padding-right: 25px
+
+      &:nth-child(even)
+        padding-left: 25px

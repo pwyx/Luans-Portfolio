@@ -1,0 +1,22 @@
+.page-container
+  position: relative
+  max-width: 1100px
+  left: 25px
+  margin: 0 auto
+  +clearfix
+
+.content-container
+  position: absolute
+  right: 50px
+  left: 50px
+  &.menu-active
+    left: 220 + 20px
+
+.page-title
+  font:
+    weight: 600
+    family: 'Roboto Condensed', sans-serif
+
+img.emojione
+  +size(24px)
+  vertical-align: text-bottom

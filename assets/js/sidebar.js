@@ -4,16 +4,12 @@ $(document).ready(function($) {
     var $window = $(window), $html = $('.sidebar-button');
 
     $window.resize(function resize() {
-      // #logo expanded width is 438
-      // if ($window.width() < Math.max(768, 500 + $('.nav.navbar-nav.navbar-right').width())) {
       if ($window.width() < Math.max(1440)) {
-      //   $('#logo').text('ASP');
         $('body').removeClass('push-body-toright');
         $('.sidebar-button').removeClass('active');
         $('.sidebar').removeClass('open');
         return $html.addClass('push-body');
       }
-      // $('#logo').text('Autism Social Platform');
       $html.removeClass('push-body');
     }).trigger('resize');
   })(jQuery);
