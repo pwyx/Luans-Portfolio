@@ -1,0 +1,26 @@
+---
+layout: index
+---
+<div class="splash">
+
+  <div class="logo-container">
+    <img src="{{ site.baseurl }}/assets/img/logo_white.svg" alt="Luan Illustrates Logo">
+  </div>
+
+  <nav>
+    <div class="index-container">
+      {% for item in site.data.settings.index-menu %}
+        {% if item.type == "block" %}
+        <a href="{{ site.baseurl }}{{ item.url }}">
+          <div class="nav-link" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
+            <div class="text-container">
+              {{ item.name }}
+            </div>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+
+</div>
