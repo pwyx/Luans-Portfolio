@@ -9,9 +9,10 @@ title: LUANtics
   {% for post in site.posts %}
     <a href="{{ site.baseurl }}{{ post.url }}">
       <li class="blog-item" style="background-image: url('{{ site.baseurl }}{{ post.header-img }}')">
-        <div class="overlay"></div>
         <div class="post-title">
-          {{ post.number }}: {{ post.title }}
+          <span class="title-text">
+            {{ post.number }}: {{ post.title }}
+          </span>
         </div>
       </li>
     </a>

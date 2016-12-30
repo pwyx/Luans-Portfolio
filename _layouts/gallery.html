@@ -4,7 +4,7 @@ layout: page
 
 {% for gallery in site.data.galleries %}
   {% if gallery.id == page.galleryid %}
-    <h2 class="gallery-description">{{ gallery.description }}</h2>
+    <h2 class="gallery-description">{{ gallery.description | emojify }}</h2>
     <div class="gallery-container">
       <ul class="gridder">
         {% for image in gallery.images %}
@@ -13,10 +13,10 @@ layout: page
               {% if image.title %}
                 <div class="description">
                   {% if image.title %}
-                    <h2>{{ image.title }}</h2>
+                    <h2>{{ image.title | emojify }}</h2>
                   {% endif %}
                   {% if image.text %}
-                    <h3>{{ image.text }}</h3>
+                    <h3>{{ image.text | emojify }}</h3>
                   {% endif %}
                 </div>
               {% endif %}

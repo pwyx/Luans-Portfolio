@@ -15,30 +15,24 @@ ul
   position: relative
   height: 100px
 
-  .overlay
-    background-color: rgba(0,0,0,0)
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    z-index: 2
-
   .post-title
     display: inline-block
     position: absolute
     bottom: 0
+    background: rgba(0,0,0,0.35)
+
+  .title-text
     padding: 0 5px
-    background: rgba(255,255,255,0.75)
-    color: #3d3d3d
+    color: #fff
 
   &:hover
-    .overlay
-      background-color: rgba(255,255,255,0.5)
-
     .post-title
+      background:
+        color: rgb(155, 251, 210)
+
+    .title-text
       color: #000
-      background-color: rgba(0,0,0,0)
+
 
 .page-title
   .highlight

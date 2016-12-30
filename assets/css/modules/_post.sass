@@ -3,16 +3,17 @@
 
   .header-img
     width: 100%
+    height: 280px
     padding-top: 40%
     background:
       size: cover
       repeat: no-repeat
-      position: 50% 50%
-      attachment: scroll
+      position: center center
+      // attachment: fixed
     
-    @media #{$mq-small}
-      padding: 0
-      height: 15em
+    // @media #{$mq-small}
+    //   padding: 0
+    //   height: 15em
 
   .heading
     padding: 25px 0
@@ -49,7 +50,7 @@
   .post-content
     max-width: 920px
     position: relative
-    margin: 0 auto
+    margin: 50px auto
 
     img.emojione
       +size(24px)

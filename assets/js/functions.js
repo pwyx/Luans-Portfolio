@@ -21,14 +21,16 @@ $(document).ready(function() {
 
 });
 
+
+
 // post header
-$(window).scroll(function() {
+/*$(window).scroll(function() {
   if ($(this).width() > 768) {
     var scrolledY = $(window).scrollTop();
     $('.header-img').css('background-position', 'center ' + ((scrolledY)) + 'px');
   }
 });
-
+*/
 /*
 $(window).load(function($){
   header_scroll();
