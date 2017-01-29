@@ -1,15 +1,17 @@
+.wrapper
+  padding: 20px
+
 .logo-container
-  margin: 50px 0
+  margin-bottom: 20px
   img
     display: block
     margin: 0 auto
-    max-width: 1000px
+    max-width: 960px
 
 .block-container
   max-width: 960px
   +display(flex)
-  margin: 0 auto
-  padding-bottom: 90px
+  margin: 0 auto 20px auto
   +justify-content(space-between)
 
   .block
@@ -154,9 +156,37 @@
       font-size: 20px
       text-decoration: inherit
 
+  @media only screen and (min-width: 769px) and (max-width: 960px)
+    display: block
+    margin-bottom: 10px
+    #illustration
+      float: left
+      width: 49%
+    #photography
+      float: right
+      width: 49%
+    #blog
+      float: none
+      width: 100%
+    .block
+      margin-bottom: 2%
+
+    &:before, &:after
+      content: " "
+      display: table
+    &:after
+      clear: both
+
+
+  @media only screen and (max-width: 768px)
+    flex-flow: column
+    height: 620px
+    .block
+      width: 100%
+
 .other-wrapper
   +justify-content(space-between)
-  max-width: 1000px
+  max-width: 960px
   margin: 0 auto
 
   .other-container

@@ -25,26 +25,31 @@
         var keycode = e.keyCode;
         var $current_gridder = $(".currentGridder");
         var $current_target = $current_gridder.find(".gridder-show");
-        if($current_gridder.length){
+        if ($current_gridder.length) {
             if ( keycode === 37 ) {
-                console.log("Pressed Left Arrow");
+                // console.log("Pressed Left Arrow");
                 $current_target.prev().prev().trigger("click");
                 e.preventDefault();
             }
             if ( keycode === 39 ) {
-                console.log("Pressed Right Arrow");
+                // console.log("Pressed Right Arrow");
                 $current_target.next().trigger("click");
                 e.preventDefault();
             }
-        }else{
-            console.log("No active gridder.");
+            if ( keycode === 27 ) {
+                // console.log("Pressed Escape Key");
+                $current_target.find(".gridder-close").trigger("click");
+                e.preventDefault();
+            }
+        } else {
+            // console.log("No active gridder.");
         }   
     });
     
     $.fn.gridderExpander = function(options) {
         
         /* GET DEFAULT OPTIONS OR USE THE ONE PASSED IN THE FUNCTION  */
-        var settings = $.extend( {}, $.fn.gridderExpander.defaults, options );      
+        var settings = $.extend( {}, $.fn.gridderExpander.defaults, options );
 
         return this.each(function() {
             
@@ -125,7 +130,7 @@
                     // Load #ID Content
                     thecontent = $(myself.data("griddercontent")).html();
                     processContent(myself, thecontent);
-                }else{
+                } else {
                     
                     // Load AJAX Content
                     $.ajax({
@@ -149,7 +154,7 @@
                 /* FORMAT OUTPUT */   
                 var htmlcontent = "<div class=\"gridder-padding\">";
                 
-                if(settings.showNav){
+                if (settings.showNav) {
                     
                     /* CHECK IF PREV AND NEXT BUTTON HAVE ITEMS */
                     var prevItem = ($(".selectedItem").prev());
@@ -205,8 +210,7 @@
             /* CLICK EVENT */
             _this.on("click", ".gridder-list", function (e) {
                 e.preventDefault();
-                var myself = $(this);
-                openExpander(myself);
+                openExpander($(this));
             });
             
             /* NEXT BUTTON */

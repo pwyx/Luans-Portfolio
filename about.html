@@ -4,7 +4,6 @@ title: About Me
 ---
 
 <div class="bio-container">
-
   <div class="bio-img">
     <img src="{{ site.baseurl }}/assets/img/about.jpg" alt="Luan Tran Profile Picture" />
   </div>
@@ -17,3 +16,37 @@ title: About Me
   </div>
 
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    // about page
+    var dynamic = $('.bio-img');
+    var static = $('.bio-text');
+
+    $(window).load(function() {
+      if($(window).width() <= 768) {
+        $('.bio-text').insertBefore($('.bio-img'));
+        // $('.bio-img').insertAfter($('.bio-divider'));
+        static.height('inherit');
+        $('.bio-img').height($('.bio-img img')[0].height * 0.825 + 'px');
+      } else {
+        static.height(dynamic.height());
+        $('.bio-img').height('auto');
+      }
+    })
+
+    $(window).resize(function resize() {
+      if($(window).width() <= 768) {
+        $('.bio-text').insertBefore($('.bio-img'));
+        // $('.bio-img').insertAfter($('.bio-divider'));
+        static.height('inherit');
+        $('.bio-img').height($('.bio-img img')[0].height * 0.825 + 'px');
+      } else {
+        $('.bio-img').insertBefore($('.bio-text'));
+        // $('.bio-text').insertAfter($('.bio-divider'));
+        static.height(dynamic.height());
+        $('.bio-img').height('auto');
+      }
+    }).trigger('resize');
+  });
+</script>

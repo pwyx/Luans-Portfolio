@@ -5,8 +5,6 @@
   position: fixed
   top: 0px
   bottom: 0px
-  // top: 20px
-  // bottom: 20px
 
   .sidebar-button
     background: $accent-color
@@ -21,6 +19,7 @@
     cursor: pointer
     width: 50px
     color: $accent-light
+
     &:hover
       color: #fff
       .text-container:before
@@ -49,8 +48,8 @@
   &.open
     left: 0px
     .sidebar-button
-      // left: 220px
-      display: none
+      left: -50px
+      // display: none
 
   .sidebar-menu
     background: $accent-color
@@ -116,7 +115,7 @@
   left: 0
 
 .push-body-toright
-  left: 220 - 50px
+  left: 220px - 50px
 
 /* Transitions */
 .sidebar, .push-body
@@ -124,7 +123,7 @@
   -moz-transition: all 0.3s ease-in-out
   transition: all 0.3s ease-in-out
 
-.sidebar-button
-  -webkit-transition: all 1.25s ease-in-out
-  -moz-transition: all 1.25s ease-in-out
-  transition: all 1.25s ease-in-out
+// .sidebar-button
+  // -webkit-transition: all 0.15s ease-in-out
+  // -moz-transition: all 0.15s ease-in-out
+  // transition: all 0.15s ease-in-out

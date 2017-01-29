@@ -1,27 +1,3 @@
-$(document).ready(function() {
-
-  // change label color on form focus
-  $('form label textarea, form label input').focus(function() {
-    $(this).siblings('span').addClass('input-focus');
-  }).blur(function() {
-    $('span').removeClass('input-focus');
-  });
-
-  // about page
-  var dynamic = $('.bio-img');
-  var static = $('.bio-text');
-
-  $(window).load(function() {
-    static.height(dynamic.height());
-  })
-
-  $(window).resize(function resize() {
-      static.height(dynamic.height());
-  }).trigger('resize');
-
-});
-
-
 
 // post header
 /*$(window).scroll(function() {

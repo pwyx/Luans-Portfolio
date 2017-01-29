@@ -9,14 +9,13 @@ layout: index_old
   <div class="block-container">
     {% for item in site.data.settings.index-menu %}
       {% if item.type == "block" %}
-      <a href="{{ site.baseurl }}{{ item.url }}">
-        <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
-          <div class="text-container">
-            {{ item.name }}
-            <!-- <hr/> -->
+        <a href="{{ site.baseurl }}{{ item.url }}">
+          <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
+            <div class="text-container">
+              {{ item.name }}
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
       {% endif %}
     {% endfor %}
   </div>
@@ -25,11 +24,11 @@ layout: index_old
     <div class="other-container">
       {% for item in site.data.settings.index-menu %}
         {% if item.type == "other" %}
-        <div class="other">
-          <a href="{{ site.baseurl }}{{ item.url }}">
-            {{ item.name }}
-          </a>
-        </div>
+          <div class="other">
+            <a href="{{ site.baseurl }}{{ item.url }}">
+              {{ item.name }}
+            </a>
+          </div>
         {% endif %}
       {% endfor %}
     </div>
