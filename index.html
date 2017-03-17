@@ -14,19 +14,19 @@ layout: index
   </div>
 
   <div class="splash-icons">
-    <a class="fa-stack" href="about">
+    <a class="about fa-stack" href="about">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-user fa-stack-1x fa-inverse"></i>
     </a>
-    <a class="fa-stack" href="contact">
+    <a class="contact fa-stack" href="contact">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
     </a>
-    <a class="fa-stack" href="https://www.facebook.com/luan.tran.311056">
+    <a class="facebook fa-stack" href="https://www.facebook.com/luan.tran.311056">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
     </a>
-    <a class="fa-stack" href="https://www.instagram.com/luan.illust/">
+    <a class="instagram fa-stack" href="https://www.instagram.com/luan.illust/">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
     </a>
@@ -78,6 +78,26 @@ layout: index
       $(this).find($(".fa-circle")).css("display","none");
       $(this).find($(".fa-inverse")).css("color","#fff");
     });*/
+
+    $(".about").on("mouseenter", function() {
+      $(".splash-content .text-container h1").text("About Me");
+    });
+
+    $(".contact").on("mouseenter", function() {
+      $(".splash-content .text-container h1").text("Let's Talk");
+    });
+
+    $(".facebook").on("mouseenter", function() {
+      $(".splash-content .text-container h1").text("Like me on Facebook");
+    });
+
+    $(".instagram").on("mouseenter", function() {
+      $(".splash-content .text-container h1").text("Follow me on Instagram");
+    });
+
+    $(".splash-icons").on("mouseleave", function() {
+      $(".splash-content .text-container h1").text("Welcome!");
+    });
 
     $(".splash-link").on("mouseenter", function() {
       var index = $(this).index();
