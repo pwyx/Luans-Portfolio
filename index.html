@@ -68,7 +68,6 @@ layout: index
     // console.log(splashElement.style.backgroundImage);
   }*/
 
-  $(document).ready(function() {
 /*    $(".fa-stack").on("mouseenter", function() {
       $(this).find($(".fa-circle")).css({"display": "block","color": "#fff"});
       $(this).find($(".fa-inverse")).css("color", "#9bfbd2");
@@ -79,6 +78,7 @@ layout: index
       $(this).find($(".fa-inverse")).css("color","#fff");
     });*/
 
+  $(document).ready(function() {
     $(".about").on("mouseenter", function() {
       $(".splash-content .text-container h1").text("About Me");
     });
@@ -98,7 +98,9 @@ layout: index
     $(".splash-icons").on("mouseleave", function() {
       $(".splash-content .text-container h1").text("Welcome!");
     });
+  });
 
+  $(window).load(function() {
     $(".splash-link").on("mouseenter", function() {
       var index = $(this).index();
       $(".splash-content .text-container").css("display", "none");
