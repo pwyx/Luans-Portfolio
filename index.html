@@ -1,36 +1,100 @@
 ---
-layout: index_old
+layout: index
 ---
-<div class="logo-container">
-  <img src="{{ site.baseurl }}/assets/img/logo.svg" alt="Luan Illustrates Logo">
-</div>
-
-<nav>
-  <div class="block-container">
-    {% for item in site.data.settings.index-menu %}
-      {% if item.type == "block" %}
-        <a href="{{ site.baseurl }}{{ item.url }}">
-          <div class="block" id="{{ item.name | downcase | replace: 'luantics', 'blog'}}">
-            <div class="text-container">
-              {{ item.name }}
-            </div>
-          </div>
-        </a>
-      {% endif %}
-    {% endfor %}
+<div class=splash-background></div>
+<div class="splash-content">
+  <div class="text-container">
+    <h1>Welcome!</h1>
   </div>
 
-  <div class="other-wrapper">
-    <div class="other-container">
-      {% for item in site.data.settings.index-menu %}
-        {% if item.type == "other" %}
-          <div class="other">
-            <a href="{{ site.baseurl }}{{ item.url }}">
-              {{ item.name }}
-            </a>
-          </div>
-        {% endif %}
-      {% endfor %}
+  <div class="splash-images">
+    <div class="splash-image illustration" style="background-image: url('/assets/img/home/illustration.jpg')"></div>
+    <div class="splash-image photography" style="background-image: url('/assets/img/home/photography.jpg')"></div>
+    <div class="splash-image blog" style="background-image: url('/assets/img/home/blog.jpg')"></div>
+  </div>
+
+  <div class="splash-icons">
+    <a class="fa-stack" href="about">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack" href="contact">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack" href="https://www.facebook.com/luan.tran.311056">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+    </a>
+    <a class="fa-stack" href="https://www.instagram.com/luan.illust/">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+    </a>
+  </div>
+
+  <div class="nav-container">
+    <img class="logo" src="{{ site.baseurl }}/assets/img/logo_white.svg" alt="Luan Illustrates Logo">
+
+    <div class="splash-links">
+      <a class="splash-link illustration" href="/illustration">
+        <img class="illustration" src="{{ site.baseurl }}/assets/img/illustration.svg" alt="Illustration">
+      </a>
+      <a class="splash-link photography" href="/photography">
+        <img class="photography" src="{{ site.baseurl }}/assets/img/photography.svg" alt="Photography">
+      </a>
+      <a class="splash-link blog" href="/blog">
+        <img class="blog" src="{{ site.baseurl }}/assets/img/luantics.svg" alt="Luantics">
+      </a>
     </div>
   </div>
-</nav>
+</div>
+
+<script type="text/javascript">
+  // document.querySelector("a.illustration").addEventListener("mouseenter", setSplash.bind(this, "illustration"));
+  // document.querySelector("a.photography").addEventListener("mouseenter", setSplash.bind(this, "photography"));
+  // document.querySelector("a.blog").addEventListener("mouseenter", setSplash.bind(this, "blog"));
+
+  // Reset background
+  // document.querySelector(".nav-container").addEventListener("mouseleave", setSplash.bind(this, null));
+
+/*  function setSplash(newSplash) {
+    splashElement = document.querySelector(".splash-image");
+    if (newSplash == null) {
+      splashElement.style.display = "none";
+    } else {
+      if (splashElement.style.display == "none") splashElement.style.display = "block";
+      splashElement.style.backgroundImage = "url('/assets/img/thumb/" + newSplash + ".jpg')";
+    }
+    // console.log(splashElement.style.backgroundImage);
+  }*/
+
+  $(document).ready(function() {
+/*    $(".fa-stack").on("mouseenter", function() {
+      $(this).find($(".fa-circle")).css({"display": "block","color": "#fff"});
+      $(this).find($(".fa-inverse")).css("color", "#9bfbd2");
+    });
+
+    $(".fa-stack").on("mouseleave", function() {
+      $(this).find($(".fa-circle")).css("display","none");
+      $(this).find($(".fa-inverse")).css("color","#fff");
+    });*/
+
+    $(".splash-link").on("mouseenter", function() {
+      var index = $(this).index();
+      $(".splash-content .text-container").css("display", "none");
+      $(".splash-image").removeClass("active");
+      $(".splash-image").eq(index).addClass("active");
+    });
+
+    $(".nav-container").on("mouseleave", function() {
+      $(".splash-content .text-container").css("display", "flex");
+      $(".splash-image").removeClass("active");
+    });
+
+    $(window).resize(function resize() {
+      $(".splash-links").height($(".logo").height());
+      $(".splash-links").width($(".splash-content").width() - $(".logo").width());
+    }).trigger('resize');
+
+  });
+</script>

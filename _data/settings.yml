@@ -20,3 +20,10 @@ sidebar-menu:
 - {name: LUANtics,     url: '/blog'}
 - {name: About Me,     url: '/about'}
 - {name: Let's Talk,   url: '/contact'}
+
+splash-menu:
+- {name: Photography,  url: '/photography',  icon: fa-camera-retro, sub: 'Portfolio'}
+- {name: Illustration, url: '/illustration', icon: fa-pencil,       sub: 'Portfolio'}
+- {name: LUANtics,     url: '/blog',         icon: fa-newspaper-o}
+- {name: About Me,     url: '/about',        icon: fa-user}
+- {name: Let's Talk,   url: '/contact',      icon: fa-phone}

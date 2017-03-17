@@ -4,7 +4,7 @@ $(document).ready(function($) {
     var $window = $(window), $html = $('.sidebar-button');
 
     $window.resize(function resize() {
-      if ($window.width() < Math.max(1440)) {
+      if ($window.width() < 1440) {
         $('body').removeClass('push-body-toright');
         $('.sidebar-button').removeClass('active');
         $('.sidebar').removeClass('open');
@@ -18,8 +18,9 @@ $(document).ready(function($) {
 
 (function($) {
   $.fn.sideMenu = function() {
-
-    $('body').addClass('push-body');
+    if ($('.splash-background').length == 0) {
+      $('body').addClass('push-body');
+    }
 
     $(this).click(function(e) {
 

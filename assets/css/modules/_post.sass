@@ -44,6 +44,15 @@
     margin-left: calc(4% + 50px)
     margin-right: 4%
 
+    .post-content
+      max-width: 920px
+      position: relative
+      margin: 50px auto
+
+      img.emojione
+        +size(1.125em)
+        vertical-align: text-top
+
     @media #{$mq-medium}
       // margin: 0 8%
       margin-left: calc(8% + 50px)
@@ -54,12 +63,3 @@
 
     @media #{$mq-xlarge}
       margin: 0 18%
-
-    .post-content
-      max-width: 920px
-      position: relative
-      margin: 50px auto
-
-      img.emojione
-        +size(24px)
-        vertical-align: text-bottom
