@@ -98,6 +98,11 @@ layout: index
     $(".splash-icons").on("mouseleave", function() {
       $(".splash-content .text-container h1").text("Welcome!");
     });
+
+    if ($(".logo").height() > 0) {
+      $(".splash-links").height($(".logo").height());
+      $(".splash-links").width($(".splash-content").width() - $(".logo").outerWidth());
+    }
   });
 
   $(window).load(function() {
@@ -115,7 +120,7 @@ layout: index
 
     $(window).resize(function resize() {
       $(".splash-links").height($(".logo").height());
-      $(".splash-links").width($(".splash-content").width() - $(".logo").width());
+      $(".splash-links").width($(".splash-content").width() - $(".logo").outerWidth());
     }).trigger('resize');
 
   });

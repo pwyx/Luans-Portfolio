@@ -22,10 +22,13 @@
     align-items: center
 
     h1
-      font-size: 100pt
+      font-size: 5em
       color: #fff
       text-transform: uppercase
       font-weight: 800
+
+      @media only screen and (min-width: 768px)
+        max-width: 75%
 
   .splash-images
     height: 100%
@@ -40,7 +43,7 @@
       background:
         position: center center
         size: cover
-      transition: opacity 0.5s ease-in-out
+      transition: opacity 0.3s ease-in-out
 
       &.active
         opacity: 1
@@ -48,8 +51,8 @@
   .splash-icons
     font-size: 1.5em
     position: absolute
-    top: 15px
-    right: 15px
+    top: 2%
+    right: 2%
 
     .fa-stack
       .fa-circle
@@ -72,8 +75,10 @@
     .logo
       width: 30%
       max-width: 400px
-      outline: 1px solid #fff
-      outline-offset: -1px
+      padding-left: 2%
+      padding-bottom: 2%
+      // outline: 1px solid #fff
+      // outline-offset: -1px
 
     .splash-links
       display: inline-flex

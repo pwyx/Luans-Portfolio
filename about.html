@@ -1,52 +1,23 @@
 ---
-layout: page
+layout: default
 title: About Me
 ---
 
+<h1 class="bio-headline">
+  Hello! I’m Luan Tran;<br/>
+  an illustrator and photographer
+</h1>
+
 <div class="bio-container">
   <div class="bio-img">
-    <img src="{{ site.baseurl }}/assets/img/about.jpg" alt="Luan Tran Profile Picture" />
+    <img class="full-image" src="{{ site.baseurl }}/assets/img/about.jpg" alt="Luan Tran Profile Picture" />
+    <img class="circle-image" src="{{ site.baseurl }}/assets/img/about_circle.jpg" alt="Luan Tran Profile Picture" />
   </div>
 
   <div class="bio-text">
     <div class="text-container">
-        <p><em>Hello! I’m Luan Tran; an <strong>illustrator</strong> and <strong>photographer</strong></em> (and graphic designer) and am currently based in Adelaide. If you would like to see some of my work, feel free to check out my <a href="/illustration">illustration</a> and <a href="/photography">photography</a> portfolios, or find me on <a href="http://www.instagram.com/luan.illust/">instagram</a>.</p>
+        <p>I'm currently based in Adelaide. If you would like to see some of my work, feel free to check out my <a href="/illustration">illustration</a> and <a href="/photography">photography</a> portfolios, or find me on <a href="https://www.facebook.com/luan.illust">facebook</a> or <a href="http://www.instagram.com/luan.illust/">instagram</a>.</p>
       </div>
     </div>
   </div>
-
 </div>
-
-<script type="text/javascript">
-  $(document).ready(function() {
-    // about page
-    var dynamic = $('.bio-img');
-    var static = $('.bio-text');
-
-    $(window).load(function() {
-      if($(window).width() <= 768) {
-        $('.bio-text').insertBefore($('.bio-img'));
-        // $('.bio-img').insertAfter($('.bio-divider'));
-        static.height('inherit');
-        $('.bio-img').height($('.bio-img img')[0].height * 0.825 + 'px');
-      } else {
-        static.height(dynamic.height());
-        $('.bio-img').height('auto');
-      }
-    })
-
-    $(window).resize(function resize() {
-      if($(window).width() <= 768) {
-        $('.bio-text').insertBefore($('.bio-img'));
-        // $('.bio-img').insertAfter($('.bio-divider'));
-        static.height('inherit');
-        $('.bio-img').height($('.bio-img img')[0].height * 0.825 + 'px');
-      } else {
-        $('.bio-img').insertBefore($('.bio-text'));
-        // $('.bio-text').insertAfter($('.bio-divider'));
-        static.height(dynamic.height());
-        $('.bio-img').height('auto');
-      }
-    }).trigger('resize');
-  });
-</script>
