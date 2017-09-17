@@ -8,9 +8,15 @@ layout: index
   </div>
 
   <div class="splash-images">
-    <div class="splash-image illustration" style="background-image: url('{{ site.baseurl }}/assets/img/home/illustration.jpg')"></div>
-    <div class="splash-image photography" style="background-image: url('{{ site.baseurl }}/assets/img/home/photography.jpg')"></div>
-    <div class="splash-image blog" style="background-image: url('{{ site.baseurl }}/assets/img/home/blog.jpg')"></div>
+    <div class="splash-image illustration" style="background-image: url('{{ site.baseurl }}/assets/img/home/illustration_green.jpg')"></div>
+    <div class="splash-image photography" style="background-image: url('{{ site.baseurl }}/assets/img/home/photography_green.jpg')"></div>
+    <div class="splash-image blog" style="background-image: url('{{ site.baseurl }}/assets/img/home/blog_green.jpg')"></div>
+  </div>
+
+  <div class="colour-splash-images">
+    <div class="colour-splash-image illustration" style="background-image: url('{{ site.baseurl }}/assets/img/home/illustration_colour.jpg')"></div>
+    <div class="colour-splash-image photography" style="background-image: url('{{ site.baseurl }}/assets/img/home/photography_colour.jpg')"></div>
+    <div class="colour-splash-image blog" style="background-image: url('{{ site.baseurl }}/assets/img/home/blog_colour.jpg')"></div>
   </div>
 
   <div class="splash-icons">
@@ -120,6 +126,13 @@ layout: index
     $(".nav-container").on("mouseleave", function() {
       $(".splash-content .text-container").css("display", "flex");
       $(".splash-image").removeClass("active");
+    });
+
+    $(".splash-link").on("mouseclick", function() {
+      var index = $(this).index();
+      $(".splash-content .text-container").css("display", "none");
+      $(".colour-splash-image").removeClass("active");
+      $(".colour-splash-image").eq(index).addClass("active");
     });
 
     $(window).resize(function resize() {

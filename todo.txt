@@ -1,17 +1,12 @@
 To Do
+Splash:
+  Change svg buttons to text
+  Change Facebook link
+  Rename splash images
 
 Blog:
 	Blog post header image center
+  Black and white list -> colour on hover
 
-Sidebar:
-	Page Name
-	Hover state timing
-
-About:
-	Mobile Page
-
-Page Title Headings: Font Tweaks
-
-Contact Page:
-	Mobile Screen
-		Cascading Input Fields
+All:
+  Increase page margins for larger screens

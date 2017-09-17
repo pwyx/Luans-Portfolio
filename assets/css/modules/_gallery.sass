@@ -77,6 +77,7 @@
   display: inline-block
   vertical-align: top
   .description
+    display: none
     background-color: $bg-color
     position: absolute
     bottom: 0
@@ -95,6 +96,9 @@
       font-style: italic
       font-weight: normal
       margin-top: 5px
+  &:hover
+    .description
+      display: block
 
 .gridder-show
   display: inline-block
