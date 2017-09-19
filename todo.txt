@@ -1,7 +1,6 @@
 To Do
 Splash:
   Change svg buttons to text
-  Change Facebook link
   Rename splash images
 
 Blog:
@@ -10,3 +9,5 @@ Blog:
 
 All:
   Increase page margins for larger screens
+
+disable scrolling in lightbobx/overlay menu html, body {margin: 0; height: 100%; overflow: hidden}

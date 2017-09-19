@@ -74,7 +74,7 @@
                 }
                 
                 _this.removeClass("hasSelectedItem");
-                _this.css("padding-bottom", "0px");
+                // _this.css("padding-bottom", "0px");
 
                 // REMOVES GRIDDER EXPAND AREA
                 visible = false;
@@ -115,7 +115,7 @@
                  */
                 if (!_this.hasClass("hasSelectedItem")) {
                     _this.addClass("hasSelectedItem");
-                    _this.css("padding-bottom", "580px");
+                    // _this.css("padding-bottom", "580px");
                 }
 
                 /* ADD LOADING BLOC */

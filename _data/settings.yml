@@ -6,24 +6,24 @@ description: Photographer // Illustrator
 email: hi@luanillustrates.com
 
 index-menu:
-- {name: About Me,     url: '/about',        type: other}
-- {name: Illustration, url: '/illustration', type: block, icon: fa-pencil }
-- {name: Photography,  url: '/photography',  type: block, icon: fa-camera-retro }
-- {name: Let's Talk,   url: '/contact',      type: other}
-- {name: LUANtics,     url: '/blog',         type: block, icon: fa-file-text-o }
+- { name: About Me,     url: '/about',         type: other }
+- { name: Illustration, url: '/illustrations', type: block, icon: fa-pencil }
+- { name: Photography,  url: '/photography',   type: block, icon: fa-camera-retro }
+- { name: Let's Talk,   url: '/contact',       type: other }
+- { name: LUANtics,     url: '/blog',          type: block, icon: fa-file-text-o }
 
 sidebar-menu:
-# - {name: Home, url: '/'}
-- {name: About Me,     url: '/about'}
-- {name: Portfolio}
-- {name: Illustration, url: '/illustration', sub: 'Portfolio'}
-- {name: Photography,  url: '/photography',  sub: 'Portfolio'}
-- {name: Let's Talk,   url: '/contact'}
-- {name: LUANtics,     url: '/blog'}
+# - { name: Home, url: '/' }
+- { name: Portfolio }
+- { name: Illustration, url: '/illustrations', sub: 'Portfolio' }
+- { name: Photography,  url: '/photography',   sub: 'Portfolio' }
+- { name: LUANtics,     url: '/blog' }
+- { name: About Me,     url: '/about' }
+- { name: Let's Talk,   url: '/contact' }
 
-splash-menu:
-- {name: About Me,     url: '/about',        icon: fa-user}
-- {name: Photography,  url: '/photography',  icon: fa-camera-retro, sub: 'Portfolio'}
-- {name: Illustration, url: '/illustration', icon: fa-pencil,       sub: 'Portfolio'}
-- {name: Let's Talk,   url: '/contact',      icon: fa-phone}
-- {name: LUANtics,     url: '/blog',         icon: fa-newspaper-o}
+overlay-menu:
+- { name: Illustration, url: '/illustrations', icon: fa-pencil,       sub: 'Portfolio' }
+- { name: Photography,  url: '/photography',   icon: fa-camera-retro, sub: 'Portfolio' }
+- { name: LUANtics,     url: '/blog',          icon: fa-newspaper-o }
+- { name: About Me,     url: '/about',         icon: fa-user }
+- { name: Let's Talk,   url: '/contact',       icon: fa-phone }

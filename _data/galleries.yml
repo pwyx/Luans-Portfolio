@@ -1,82 +1,70 @@
 #-------------------------------
 # Photography Portfolio Gallery
 - id: photography
-  description: This is my photography portfolio blah blah something something photos are cool
+  description: 
   imagefolder: assets/img/photography
   images:
-  - file: 001.jpg
-    thumb: 001.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 002.jpg
-    thumb: 002.jpg
-    title: Photo Title Blah
-  - file: 003.jpg
-    thumb: 003.jpg
-  - file: 011.jpg
-    thumb: 011.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 012.jpg
-    thumb: 012.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 013.jpg
-    thumb: 013.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 021.jpg
-    thumb: 021.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 022.jpg
-    thumb: 022.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 023.jpg
-    thumb: 023.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 014.jpg
-    thumb: 014.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 024.jpg
-    thumb: 024.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
-  - file: 034.jpg
-    thumb: 034.jpg
-    title: Photo Title Blah
-    text: Photo description blah blah photo description blah blah photo description blah blah.
+  - file: P-P01-sunset_glow.jpg
+    thumb: P-P01-sunset_glow.jpg
+    title: Sunset Glow
+    text: The glow of the evening sun over <a href="https://www.google.com.au/maps/place/Bumbunga+Lake/@-33.8925259,138.1535303,13z">Bumbunga Lake</a>
+  - file: P-P05-one_tree_hill.jpg
+    thumb: P-P05-one_tree_hill.jpg
+    title: One Tree Hill
+    text: One tree on a hill overlooking Adelaide
+  - file: P-P02-lush.jpg
+    thumb: P-P02-lush.jpg
+    title: Lush
+    text: 
+  - file: P-P03-pass.jpg
+    thumb: P-P03-pass.jpg
+    title: Pass
+    text: お前はもう死んでいる
+  - file: P-P04-qmark.jpg
+    thumb: P-P04-qmark.jpg
+    title: "???"
+    text: 
+  - file: P-P06-reperepetition.jpg
+    thumb: P-P06-reperepetition.jpg
+    title: Reperepetition
+    text: Repetitionitionitionition
+  - file: P-P07-archived.jpg
+    thumb: P-P07-archived.jpg
+    title: 
+    text: 
+  - file: P-P08-sky_high.jpg
+    thumb: P-P08-sky_high.jpg
+    title: Sky High
+    text: 420 blaze it
+  - file: P-P09-Saigone.jpg
+    thumb: P-P09-Saigone.jpg
+    title: Saigone
+    text: Sai is gone
+
 
 #-------------------------------
 # Ilustration Portfolio Gallery
-- id: illustration
-  description: This is my illustration portfolio blah blah something something drawings are cool
+- id: illustrations
+  description: 
   imagefolder: assets/img/illustration
   images:
-  - file: 040.jpg
-    thumb: 040.jpg
-    title: illustration title blah
-    text: illustration description blah blah
-  - file: 050.jpg
-    thumb: 050.jpg
-    title: illustration title blah
-    text: illustration description blah blah
-  - file: 060.jpg
-    thumb: 060.jpg
-    title: illustration title blah
-    text: illustration description blah blah
-  - file: 044.jpg
-    thumb: 044.jpg
-    title: illustration title blah
-    text: illustration description blah blah
-  - file: 055.jpg
-    thumb: 055.jpg
-    title: illustration title blah
-    text: illustration description blah blah
-  - file: 066.jpg
-    thumb: 066.jpg
-    title: illustration title blah
-    text: illustration description blah blah
+  - file: P-I01_World_WILD_Web_-_Oceanique.jpg
+    thumb: P-I01_World_WILD_Web_-_Oceanique.jpg
+    title: "World WILD Web: Oceanique"
+    text: Oceanesqueisque
+  - file: P-I02_World_WILD_Web_-_D-OG.jpg
+    thumb: P-I02_World_WILD_Web_-_D-OG.jpg
+    title: "World WILD Web: D-OG"
+    text: D. O. G. E. xd
+  - file: P-I03_World_WILD_Web_-_Gerry.jpg
+    thumb: P-I03_World_WILD_Web_-_Gerry.jpg
+    title: "World WILD Web: Gerry"
+    text: Gerry.
+  - file: P-I04_desert_igloo.jpg
+    thumb: P-I04_desert_igloo.jpg
+    title: "Desert Igloo"
+    text: An igloo in the desert.
+  - file: P-I05_deep_sea_dive.jpg
+    thumb: P-I05_deep_sea_dive.jpg
+    title: "Deap Sea Dive"
+    text: Diving in the deep sea.
