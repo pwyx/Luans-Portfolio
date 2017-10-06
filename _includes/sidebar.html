@@ -19,7 +19,7 @@
   </div>
 </div>
 
-<div class="button_container" id="toggle">
+<div class="button-container" id="toggle">
   <span class="top"></span>
   <span class="middle"></span>
   <span class="bottom"></span>
@@ -28,6 +28,7 @@
 <div class="overlay" id="overlay">
   <nav class="overlay-menu">
     <ul>
+      <li><a href="/" class="logo"></a>
       {% for item in site.data.settings.overlay-menu %}
         <li>
           {% if item.url %}

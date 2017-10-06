@@ -4,7 +4,9 @@ layout: index
 <div class=splash-background></div>
 <div class="splash-content">
   <div class="text-container">
-    <h1>Welcome!</h1>
+    <div class="current-link"></div>
+    <img class="splash-logo logo-wide" src="{{ site.baseurl }}/assets/img/logo_splash.png" alt="Luan Tran"/>
+    <img class="splash-logo logo-stacked" src="{{ site.baseurl }}/assets/img/logo_stacked.png" alt="Luan Tran"/>
   </div>
 
   <div class="splash-images">
@@ -13,11 +15,11 @@ layout: index
     <div class="splash-image blog" style="background-image: url('{{ site.baseurl }}/assets/img/home/blog_green.jpg')"></div>
   </div>
 
-  <div class="colour-splash-images">
+  <!-- <div class="colour-splash-images">
     <div class="colour-splash-image illustration" style="background-image: url('{{ site.baseurl }}/assets/img/home/illustration_colour.jpg')"></div>
     <div class="colour-splash-image photography" style="background-image: url('{{ site.baseurl }}/assets/img/home/photography_colour.jpg')"></div>
     <div class="colour-splash-image blog" style="background-image: url('{{ site.baseurl }}/assets/img/home/blog_colour.jpg')"></div>
-  </div>
+  </div> -->
 
   <div class="splash-icons">
     <a class="about fa-stack" href="about">
@@ -28,31 +30,21 @@ layout: index
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
     </a>
-    <a class="facebook fa-stack" href="https://www.facebook.com/luanillustrates">
+    <a class="facebook fa-stack" href="https://www.facebook.com/{{ site.social.facebook }}">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
     </a>
-    <a class="instagram fa-stack" href="https://www.instagram.com/luan.illust/">
+    <a class="instagram fa-stack" href="https://www.instagram.com/{{ site.social.instagram }}">
       <i class="fa fa-circle fa-stack-2x"></i>
       <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
     </a>
   </div>
 
-  <div class="nav-container">
-    <img class="logo" src="{{ site.baseurl }}/assets/img/logo_white.svg" alt="Luan Illustrates Logo">
-
-    <div class="splash-links">
-      <a class="splash-link illustration" href="{{ site.baseurl }}/illustrations">
-        <img class="illustration" src="{{ site.baseurl }}/assets/img/illustration.svg" alt="Illustration">
-      </a>
-      <a class="splash-link photography" href="{{ site.baseurl }}/photography">
-        <img class="photography" src="{{ site.baseurl }}/assets/img/photography.svg" alt="Photography">
-      </a>
-      <a class="splash-link blog" href="{{ site.baseurl }}/blog">
-        <img class="blog" src="{{ site.baseurl }}/assets/img/luantics.svg" alt="Luantics">
-      </a>
-    </div>
-  </div>
+  <nav class="splash-main-nav">
+    <a class="splash-link illustration" href="{{ site.baseurl }}/illustrations">Illustration</a>
+    <a class="splash-link photography" href="{{ site.baseurl }}/photography">Photography</a>
+    <a class="splash-link blog" href="{{ site.baseurl }}/blog">LUANtics</a>
+  </nav>
 </div>
 
 <script type="text/javascript">
@@ -76,7 +68,7 @@ layout: index
 
 /*    $(".fa-stack").on("mouseenter", function() {
       $(this).find($(".fa-circle")).css({"display": "block","color": "#fff"});
-      $(this).find($(".fa-inverse")).css("color", "#9bfbd2");
+      $(this).find($(".fa-inverse")).css("color", "#bbffdb");
     });
 
     $(".fa-stack").on("mouseleave", function() {
@@ -84,7 +76,7 @@ layout: index
       $(this).find($(".fa-inverse")).css("color","#fff");
     });*/
 
-  var logo = document.querySelector(".logo");
+/*  var logo = document.querySelector(".logo");
   if (logo.complete) {
     $(".splash-links").height($(".logo").height());
     $(".splash-links").width($(".splash-content").width() - $(".logo").outerWidth());
@@ -93,27 +85,32 @@ layout: index
       $(".splash-links").height($(".logo").height());
       $(".splash-links").width($(".splash-content").width() - $(".logo").outerWidth());
     });
-  }
+  }*/
 
   $(document).ready(function() {
     $(".about").on("mouseenter", function() {
-      $(".splash-content .text-container h1").text("About Me");
+      $(".splash-content .text-container img").addClass("hidden");
+      $(".splash-content .text-container .current-link").text("About Me");
     });
 
     $(".contact").on("mouseenter", function() {
-      $(".splash-content .text-container h1").text("Let's Talk");
+      $(".splash-content .text-container img").addClass("hidden");
+      $(".splash-content .text-container .current-link").text("Let's Talk");
     });
 
     $(".facebook").on("mouseenter", function() {
-      $(".splash-content .text-container h1").text("Like me on Facebook");
+      $(".splash-content .text-container img").addClass("hidden");
+      $(".splash-content .text-container .current-link").text("Like me on Facebook");
     });
 
     $(".instagram").on("mouseenter", function() {
-      $(".splash-content .text-container h1").text("Follow me on Instagram");
+      $(".splash-content .text-container img").addClass("hidden");
+      $(".splash-content .text-container .current-link").text("Follow me on Instagram");
     });
 
     $(".splash-icons").on("mouseleave", function() {
-      $(".splash-content .text-container h1").text("Welcome!");
+      $(".splash-content .text-container img").removeClass("hidden");
+      $(".splash-content .text-container .current-link").text("");
     });
 
     $(".splash-link").on("mouseenter", function() {
@@ -123,7 +120,7 @@ layout: index
       $(".splash-image").eq(index).addClass("active");
     });
 
-    $(".nav-container").on("mouseleave", function() {
+    $(".splash-main-nav").on("mouseleave", function() {
       $(".splash-content .text-container").css("display", "flex");
       $(".splash-image").removeClass("active");
     });
@@ -135,10 +132,10 @@ layout: index
       $(".colour-splash-image").eq(index).addClass("active");
     });
 
-    $(window).resize(function resize() {
+/*    $(window).resize(function resize() {
       $(".splash-links").height($(".logo").height());
       $(".splash-links").width($(".splash-content").width() - $(".logo").outerWidth());
     }).trigger('resize');
-
+*/
   });
 </script>

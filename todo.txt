@@ -1,13 +1,9 @@
 To Do
-Splash:
-  Change svg buttons to text
-  Rename splash images
-
-Blog:
-	Blog post header image center
-  Black and white list -> colour on hover
-
-All:
-  Increase page margins for larger screens
-
+blog post header image center
+LUANtics header
 disable scrolling in lightbobx/overlay menu html, body {margin: 0; height: 100%; overflow: hidden}
+rename splash images
+mobile .webm
+align overlay menu button
+mobile about page
+delay loading pages from splash menu

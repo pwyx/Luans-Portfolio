@@ -1,16 +1,14 @@
 $(document).ready(function($) {
   $('.sidebar-button').sideMenu();
   (function($) {
-    var $window = $(window), $html = $('.sidebar-button');
-
-    $window.resize(function resize() {
-      if ($window.width() < 1440) {
+    $(window).resize(function resize() {
+      if ($(window).width() < 1440) {
         $('body').removeClass('push-body-toright');
         $('.sidebar-button').removeClass('active');
         $('.sidebar').removeClass('open');
-        return $html.addClass('push-body');
+        return $('.sidebar-button').addClass('push-body');
       }
-      $html.removeClass('push-body');
+      $('.sidebar-button').removeClass('push-body');
     }).trigger('resize');
   })(jQuery);
 
@@ -62,5 +60,10 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $('#overlay').toggleClass('open');
   });
+
+  $(window).resize(function resize() {
+    $('#toggle').removeClass('active');
+    $('#overlay').removeClass('open');
+  }).trigger('resize');
 
 })

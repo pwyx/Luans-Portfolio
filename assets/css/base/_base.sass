@@ -7,19 +7,31 @@ h1, h2, h3, h4, h5, h6
   font-family: 'Source Sans Pro', sans-serif
   // text-align: center
 
+.hidden
+  display: none !important
+
 .gigantic
-  font-size: 8rem
   line-height: 1.09
   letter-spacing: -2px
+  font-size: 4em
+
+  @media #{$mq-medium}
+    font-size: 8rem
 
 .huge, h1
-  font-size: 4rem
   line-height: 1.05
   letter-spacing: -1px
+  font-size: 2.5rem
+
+  @media #{$mq-medium}
+    font-size: 4rem
 
 .large, h2
-  font-size: 2rem
   line-height: 1.14
+  font-size: 1.5rem
+
+  @media #{$mq-medium}
+    font-size: 2rem
 
 .bigger, h3 
   font-size: 1.5rem
@@ -35,7 +47,6 @@ p
 .small, small
   font-size: 0.75rem
   line-height: 1.2
-
 
 *
   box-sizing: border-box

@@ -1,3 +1,14 @@
+.button-container
+  display: block
+.sidebar
+  display: none
+
+@media only screen and (min-width: 1250px)
+  .button-container
+    display: none
+  .sidebar
+    display: block
+
 .sidebar
   left: -220px
   z-index: 2
@@ -34,6 +45,7 @@
       height: 1rem
       line-height: 0.5
       font-size: 2rem
+      font-weight: 600
       -webkit-user-select: none
 
       &:before
@@ -54,41 +66,19 @@
 
   .sidebar-menu
     background: $accent-color
-    // background: lavender
     height: 100%
     position: relative
     padding-top: 20px
 
-    // &:before
-    //   content: " "
-    //   display: block
-    //   position: relative
-    //   top: -20px
-    //   width: 220px
-    //   height: 20px
-    //   background: $bg-color
-
-    // &:after
-    //   content: " "
-    //   display: block
-    //   position: absolute
-    //   left: 0
-    //   right: 0
-    //   bottom: -20px
-    //   height: 20px
-    //   background: $bg-color
-
     .logo
+      display: block
+      height: 176px
       // moved to _includes/head.html
       // background: url("{{ site.baseurl }}/assets/img/logo.svg") no-repeat center center
       // background-size: contain
-      display: inline-block
-      width: 220px
-      padding: 40px
-      // +size(220px)
-
 
     ul
+      margin-top: 18px
       padding-left: 20px
       color: $bg-color
 
@@ -96,6 +86,7 @@
         font-size: 24pt
         list-style-type: none
         padding-bottom: 5px
+        font-weight: 600
         
         a, span
           padding-left: 7px
@@ -140,10 +131,10 @@ $button-height: 27px
 $button-width: 35px
 
 
-.button_container
+.button-container
   position: fixed
-  top: 5%
-  right: 2%
+  top: 4%
+  right: 4%
   height: $button-height
   width: $button-width
   cursor: pointer
@@ -154,6 +145,8 @@ $button-width: 35px
     opacity: .7
   
   &.active
+    display: block
+
     .top
       transform: translateY(11px) translateX(0) rotate(45deg)
       background: $color-active
@@ -214,11 +207,16 @@ $button-width: 35px
       &:nth-of-type(6)
         animation-delay: .60s
 
+  .overlay-menu .logo
+    +size(100%)
+    animation: fadeInRight .5s ease forwards
+    animation-delay: .35s
+
   nav
     position: relative
     height: 70%
     top: 50%
-    transform: translateY(-50%)
+    transform: translateY(-60%)
     font-size: 50px
     font-weight: 400
     text-align: center
